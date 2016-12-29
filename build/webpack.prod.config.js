@@ -22,7 +22,7 @@ module.exports = {
                 test: /\.vue$/, loader: 'vue'
             },
             {
-                test: /\.(jpe?g|png|gif|svg|mp3)$/,
+                test: /\.(jpe?g|png|gif|svg)$/,
                 loader: "url",
                 query: {
                     name: 'images/[name].[hash:8].[ext]',
@@ -36,14 +36,6 @@ module.exports = {
             {
                 test: /\.less$/,
                 loader: ExtractTextPlugin.extract("css!postcss!less")
-            },
-            {
-                test: /\.scss/,
-                loader: ExtractTextPlugin.extract("css!postcss!sass")
-            },
-            {
-                test: /\.styl/,
-                loader: ExtractTextPlugin.extract("css!postcss!stylus")
             }, {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -54,9 +46,7 @@ module.exports = {
     vue: {
         loaders: {
             css: ExtractTextPlugin.extract("css!postcss"),
-            less: ExtractTextPlugin.extract("css!postcss!less"),
-            scss: ExtractTextPlugin.extract("css!postcss!sass"),
-            stylus: ExtractTextPlugin.extract("css!postcss!stylus")
+            less: ExtractTextPlugin.extract("css!postcss!less")
         },
         postcss: [require("cssnano")]
     },
