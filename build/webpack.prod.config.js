@@ -34,8 +34,8 @@ module.exports = {
                 loader: ExtractTextPlugin.extract("css!postcss")
             },
             {
-                test: /\.less$/,
-                loader: ExtractTextPlugin.extract("css!postcss!less")
+                test: /\.styl$/,
+                loader: ExtractTextPlugin.extract("css!postcss!stylus")
             }, {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -46,7 +46,7 @@ module.exports = {
     vue: {
         loaders: {
             css: ExtractTextPlugin.extract("css!postcss"),
-            less: ExtractTextPlugin.extract("css!postcss!less")
+            stylus: ExtractTextPlugin.extract("css!postcss!stylus")
         },
         postcss: [require("cssnano")]
     },

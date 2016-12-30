@@ -26,8 +26,8 @@ module.exports = {
                 loader: "vue-style!css"
             },
             {
-                test: /\.less$/,
-                loader: "vue-style!css!less"
+                test: /\.styl/,
+                loader: "vue-style!css!stylus"
             }, {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -38,7 +38,7 @@ module.exports = {
     vue: {
         loaders: {
             css: "vue-style!css",
-            less: "vue-style!css!less"
+            stylus:'vue-style!css!stylus'
         }
     }
 }
