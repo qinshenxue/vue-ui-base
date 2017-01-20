@@ -35,12 +35,6 @@ module.exports = {
             }
         ]
     },
-    vue: {
-        loaders: {
-            css: "vue-style!css",
-            stylus:'vue-style!css!stylus'
-        }
-    },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
     ]
